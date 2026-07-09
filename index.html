@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- NFR-02: Viewport tag ensures the site scales correctly on mobile, tablet, and desktop screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- NFR-03: Meaningful page title for browser tab identification -->
+  <title>Home | Teton Idaho Chamber of Commerce</title>
+  
+  <!-- NFR-04: Structured Meta Description optimized for search engine crawlers -->
+  <meta name="description" content="Welcome to the official Teton Idaho Chamber of Commerce. Discover local businesses, networking events, community resources, and regional developments.">
+  
+  <!-- Link to your project stylesheet -->
+  <link rel="stylesheet" href="styles/styles.css">
+  <!-- Correct script path with defer attribute -->
+  <script src="scripts/weather.js" defer></script>
+</head>
+<body>
+
+  <!-- REQ-COM-01 & REQ-COM-04: Header with Brand Name, Logo, and Real-Time Date Hook -->
+  <header class="site-header">
+    <div class="brand-container">
+      <img src="images/logo.webp" alt="Teton Chamber of Commerce Official Logo" width="80" height="80">
+      <h1>Teton Chamber of Commerce</h1>
+    </div>
+    <div class="date-display">
+      <span id="current-date">Wednesday, July 8, 2026</span>
+    </div>
+  </header>
+
+  <!-- REQ-COM-02: Main Site Navigation Links -->
+  <nav class="main-navigation">
+    <ul>
+      <li><a href="index.html" class="active-link">Home</a></li>
+      <li><a href="join.html">Join</a></li>
+      <li><a href="directory.html">Directory</a></li>
+    </ul>
+  </nav>
+
+  <!-- Core Content Area Container -->
+  <main class="main-content">
+    
+    <h2>Community & Business Hub</h2>
+    <p>Connecting businesses, driving economic growth, and supporting the regional community of Teton, Idaho.</p>
+
+    <!-- Weather Integration Widget Container -->
+    <section class="weather-widgetCard">
+      <h3>Teton Regional Weather</h3>
+      <div class="weather-infoBlock">
+        <div class="weather-heroCondition">
+          <!-- Standardized OpenWeather Icon Placeholder -->
+          <img id="weather-icon" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="Loading current conditions..." width="50" height="50">
+          <span id="weather-currentTemp">--&deg;F</span>
+        </div>
+        <p id="weather-description" class="capitalize-text">Retrieving live forecast data...</p>
+      </div>
+    </section>
+
+  </main>
+
+ <footer class="site-footer">
+  <!-- Top Overlay Section containing the main info grid -->
+  <div class="footer-overlay-top">
+    <div class="footer-grid-wrapper">
+      
+      <!-- Column 1: Brand Assets & Social Handles -->
+      <div class="footer-col brand-col">
+        <div class="footer-logo-box">
+          <img src="images/logo.webp" alt="Teton Chamber Logo" width="50" height="50">
+          <h2>TETON VALLEY<br><span>CHAMBER OF COMMERCE</span></h2>
+        </div>
+        <p class="tagline">RIDE FOR THE BRAND</p>
+        <div class="social-row">
+          <span class="follow-us-label">FOLLOW US :</span>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Column 2: Core Contact & Addresses -->
+      <div class="footer-col address-col">
+        <p><a href="mailto:info@tetonchamber.org">info@tetonchamber.org</a></p>
+        <p><a href="tel:2085550199">(208) 555-0199</a></p>
+        
+        <div class="address-block">
+          <span class="block-title">PHYSICAL ADDRESS:</span>
+          <p>123 Main Street<br>Teton, ID 83451</p>
+        </div>
+
+        <div class="address-block">
+          <span class="block-title">MAILING ADDRESS:</span>
+          <p>PO Box 550<br>Teton, ID 83451</p>
+        </div>
+      </div>
+
+      <!-- Column 3: Regional Info or Embedded Map Placeholder -->
+      <div class="footer-col extra-col">
+        <span class="block-title">TETON VALLEY REGION &<br>GREATER YELLOWSTONE METRO</span>
+        <p>Visitor Center Operations<br>532 North Cache Street<br>Teton, ID 83451</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Gold/Orange Navigation Strip -->
+  <div class="footer-nav-strip">
+    <div class="strip-links">
+      <a href="#">ABOUT US</a>
+      <a href="#">CONTACT</a>
+      <a href="#">MEDIA</a>
+      <a href="#">SITEMAP</a>
+      <a href="#">PRIVACY POLICY</a>
+    </div>
+  </div>
+
+  <!-- Bottom Attribution Bar -->
+  <div class="footer-bottom-bar">
+    <p>&copy; 2026 Teton Chamber of Commerce | Austin Anumudu | Nigeria</p>
+  </div>
+</footer>

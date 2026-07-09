@@ -1,0 +1,324 @@
+/* ==========================================================================
+   1. GLOBAL VARIABLES & RESET
+   ========================================================================== */
+:root {
+  --primary-color: #003366;    /* Professional Dark Blue */
+  --secondary-color: #f4f4f4;  /* Light Neutral Gray */
+  --accent-color: #e67e22;     /* Warm Amber Accent */
+  --text-dark: #333333;
+  --text-light: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   2. HEADER CONTAINER
+   ========================================================================== */
+.site-header {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: 4px solid var(--accent-color);
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.brand-container h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.brand-container img {
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.date-display {
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+/* ==========================================================================
+   3. NAVIGATION BAR (Aligned Cleanly to Far Right)
+   ========================================================================== */
+.main-navigation {
+  background-color: #002244;
+  padding: 0 2rem;
+}
+
+.main-navigation ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end; /* Pushes menu links to the far right */
+}
+
+.main-navigation a {
+  display: block;
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.main-navigation a:hover,
+.main-navigation a.active-link {
+  background-color: var(--accent-color);
+  color: var(--text-light);
+}
+
+/* ==========================================================================
+   4. MAIN CONTENT AREA
+   ========================================================================== */
+.main-content {
+  flex: 1;
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.main-content h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.main-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+}
+
+/* ==========================================================================
+   5. WEATHER WIDGET CARD
+   ========================================================================== */
+.weather-widgetCard {
+  background: var(--text-light);
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 350px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.weather-widgetCard h3 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+}
+
+.weather-infoBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.weather-heroCondition {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#weather-currentTemp {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+#weather-description {
+  margin-bottom: 0;
+  font-size: 1rem;
+  color: #666666;
+}
+
+/* Structural string utility */
+.capitalize-text {
+  text-transform: capitalize;
+}
+
+/* ==========================================================================
+   6. SITE FOOTER (Centered Components)
+   ========================================================================== */
+.site-footer {
+  background-color: var(--secondary-color);
+  color: var(--text-dark);
+  padding: 2.5rem 2rem 1.5rem 2rem;
+  margin-top: auto;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer-contact {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.footer-contact p {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center; /* Perfectly centers your social media container */
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-socials a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.footer-socials a:hover {
+  color: var(--accent-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #dddddd;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: #666666;
+}
+
+/* ==========================================================================
+   7. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+
+  .brand-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .main-navigation ul {
+    justify-content: center; /* Stack or center menu items on small displays */
+    flex-wrap: wrap;
+  }
+  
+  .main-navigation a {
+    padding: 0.8rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .weather-widgetCard {
+    max-width: 100%; /* Card scales fully on narrow screens */
+  }
+}
+
+/* ==========================================
+   SITE FOOTER ALIGNMENT ENGINE
+   ========================================== */
+.site-footer {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 2.5rem 1rem;
+  margin-top: 4rem;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* Centers every block vertically on mobile */
+  text-align: center;     /* Centers all text inside the containers */
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Perfect alignment for the social link bar */
+.footer-socials {
+  display: flex;
+  justify-content: center; /* Horizontally centers the items in the row */
+  align-items: center;
+  gap: 2rem;               /* Clean spacing between link items */
+  width: 100%;
+}
+
+.footer-socials a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-socials a:hover {
+  color: var(--accent-color);
+}
+
+.footer-map {
+  width: 100%;
+  max-width: 450px;       /* Keeps the map clean and bounded */
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  border-top: 1px solid #334155;
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+/* Desktop Adjustment: Balances layout while keeping elements orderly */
+@media (min-width: 768px) {
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr; /* Splitting space evenly into 3 tracks */
+    align-items: center;
+  }
+  
+  .footer-contact {
+    text-align: left; /* Keeps contact info neat on the left track */
+  }
+  
+  /* The middle track hosts the socials, remaining perfectly centered on the page */
+  .footer-socials {
+    justify-content: center; 
+  }
+  
+  .footer-map {
+    text-align: right; /* Aligns the map container cleanly to the right track */
+  }
+}

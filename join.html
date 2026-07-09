@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join | Teton Idaho Chamber of Commerce</title>
+  <meta name="description" content="Explore membership tier pricing and premium benefits. Apply online to enroll your organization in the Teton Chamber network.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand-container">
+      <img src="images/logo.webp" alt="Teton Chamber Logo" width="60" height="60">
+      <h1>Teton Chamber of Commerce</h1>
+    </div>
+    <div class="date-display"><span id="current-date"></span></div>
+  </header>
+
+  <nav class="main-navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="join.html" class="active">Join</a></li>
+      <li><a href="directory.html">Directory</a></li>
+    </ul>
+  </nav>
+
+  <main class="join-container">
+    <h2>Membership Application & Benefits</h2>
+    
+    <!-- Pricing and Tiers Table Structure -->
+    <section class="benefits-pricing">
+      <h3>Select Your Membership Level</h3>
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Tier Level</th>
+            <th>Annual Cost</th>
+            <th>Core Benefits Included</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Non-Profit</strong></td>
+            <td>$150 / yr</td>
+            <td>Basic Directory listing, event access, and chamber newsletters.</td>
+          </tr>
+          <tr>
+            <td><strong>Bronze</strong></td>
+            <td>$300 / yr</td>
+            <td>Standard Directory listing, social posts, and 1 workshop entry.</td>
+          </tr>
+          <tr>
+            <td><strong>Silver</strong></td>
+            <td>$600 / yr</td>
+            <td>Enhanced listing, home page carousel rotation, and expo discounts.</td>
+          </tr>
+          <tr>
+            <td><strong>Gold</strong></td>
+            <td>$1,200 / yr</td>
+            <td>Full home page card spotlights, unlimited event entries, and board eligibility.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="form-card">
+      <h3>Secure Application Form</h3>
+      <!-- Changed action to lead directly to the confirmation thank you page -->
+      <form action="thankyou.html" method="GET" class="chamber-form">
+        
+        <!-- REQUIRED FIELDS -->
+        <div class="form-group-row">
+          <label>First Name *
+            <input type="text" name="firstname" required placeholder="John">
+          </label>
+          <label>Last Name *
+            <input type="text" name="lastname" required placeholder="Doe">
+          </label>
+        </div>
+        
+        <label>Business / Organization Name *
+          <input type="text" name="bizname" required placeholder="e.g., Teton Bakery">
+        </label>
+        
+        <label>Contact Email Address *
+          <input type="email" name="email" required placeholder="name@company.com">
+        </label>
+        
+        <label>Phone Number *
+          <input type="tel" name="phone" required placeholder="(208) 555-0100">
+        </label>
+
+        <label>Target Membership Level *
+          <select name="tier" required>
+            <option value="">-- Please Select a Tier --</option>
+            <option value="Non-Profit">Non-Profit Tier</option>
+            <option value="Bronze">Bronze Tier</option>
+            <option value="Silver">Silver Tier</option>
+            <option value="Gold">Gold Tier</option>
+          </select>
+        </label>
+
+        <!-- OPTIONAL / NON-REQUIRED FIELDS -->
+        <hr style="border: 0; border-top: 1px solid #cbd5e1; margin: 1rem 0;">
+        <h3>Additional Information (Optional)</h3>
+
+        <label>Your Position / Title
+          <input type="text" name="title" placeholder="e.g., Owner, Managing Director">
+        </label>
+
+        <label>Business Website URL
+          <input type="url" name="bizurl" placeholder="https://example.com">
+        </label>
+
+        <label>Business Description
+          <textarea name="bizdesc" rows="4" placeholder="Tell us about the services your business provides..."></textarea>
+        </label>
+
+        <!-- AUTOMATED SENIORITY TIMESTAMP FIELD -->
+        <input type="hidden" id="submission-date" name="submissionDate">
+
+        <button type="submit" class="submit-button">Submit Application</button>
+      </form>
+    </section>
+<footer class="site-footer">
+  <!-- Top Overlay Section containing the main info grid -->
+  <div class="footer-overlay-top">
+    <div class="footer-grid-wrapper">
+      
+      <!-- Column 1: Brand Assets & Social Handles -->
+      <div class="footer-col brand-col">
+        <div class="footer-logo-box">
+          <img src="images/logo.webp" alt="Teton Chamber Logo" width="50" height="50">
+          <h2>TETON VALLEY<br><span>CHAMBER OF COMMERCE</span></h2>
+        </div>
+        <p class="tagline">RIDE FOR THE BRAND</p>
+        <div class="social-row">
+          <span class="follow-us-label">FOLLOW US :</span>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Column 2: Core Contact & Addresses -->
+      <div class="footer-col address-col">
+        <p><a href="mailto:info@tetonchamber.org">info@tetonchamber.org</a></p>
+        <p><a href="tel:2085550199">(208) 555-0199</a></p>
+        
+        <div class="address-block">
+          <span class="block-title">PHYSICAL ADDRESS:</span>
+          <p>123 Main Street<br>Teton, ID 83451</p>
+        </div>
+
+        <div class="address-block">
+          <span class="block-title">MAILING ADDRESS:</span>
+          <p>PO Box 550<br>Teton, ID 83451</p>
+        </div>
+      </div>
+
+      <!-- Column 3: Regional Info or Embedded Map Placeholder -->
+      <div class="footer-col extra-col">
+        <span class="block-title">TETON VALLEY REGION &<br>GREATER YELLOWSTONE METRO</span>
+        <p>Visitor Center Operations<br>532 North Cache Street<br>Teton, ID 83451</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Gold/Orange Navigation Strip -->
+  <div class="footer-nav-strip">
+    <div class="strip-links">
+      <a href="#">ABOUT US</a>
+      <a href="#">CONTACT</a>
+      <a href="#">MEDIA</a>
+      <a href="#">SITEMAP</a>
+      <a href="#">PRIVACY POLICY</a>
+    </div>
+  </div>
+
+  <!-- Bottom Attribution Bar -->
+  <div class="footer-bottom-bar">
+    <p>&copy; 2026 Teton Chamber of Commerce | Austin Anumudu | Nigeria</p>
+  </div>
+</footer>

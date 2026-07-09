@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Received | Teton Chamber</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand-container">
+      <img src="images/logo.webp" alt="Teton Chamber Logo" width="60" height="60">
+      <h1>Teton Chamber of Commerce</h1>
+    </div>
+    <div class="date-display"><span id="current-date"></span></div>
+  </header>
+
+  <nav class="main-navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="join.html">Join</a></li>
+      <li><a href="directory.html">Directory</a></li>
+    </ul>
+  </nav>
+
+  <main class="join-container" style="max-width: 700px;">
+    <div class="info-card" style="text-align: center; border-top: 4px solid var(--accent-color);">
+      <h2>🎉 Application Successfully Received!</h2>
+      <p>Thank you for joining the Teton Chamber of Commerce. Below is a summary of the record data we received:</p>
+      
+      <!-- Summarized submission data output wrapper -->
+      <div id="summary-display" style="text-align: left; background: #f1f5f9; padding: 1.5rem; border-radius: 6px; margin: 1.5rem 0; line-height: 1.8;">
+        <!-- Filled dynamically via parsed query strings -->
+        <p>Loading application record summary...</p>
+      </div>
+
+      <a href="index.html" class="cta-button">Return to Home Page</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Teton Chamber of Commerce | Austin Anumudu | Nigeria</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>
+    // Simple verification parser to read query parameters and output the summary
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const summaryEl = document.getElementById('summary-display');
+      
+      if (urlParams.has('firstname') && summaryEl) {
+        summaryEl.innerHTML = `
+          <strong>Applicant Name:</strong> ${urlParams.get('firstname')} ${urlParams.get('lastname')}<br>
+          <strong>Organization:</strong> ${urlParams.get('bizname')}<br>
+          <strong>Email:</strong> ${urlParams.get('email')}<br>
+          <strong>Phone:</strong> ${urlParams.get('phone')}<br>
+          <strong>Selected Tier:</strong> <span style="color:var(--accent-color); font-weight:bold;">${urlParams.get('tier')} Member</span><br>
+          <strong>Position Title:</strong> ${urlParams.get('title') || '<em>Not Provided</em>'}<br>
+          <strong>Website:</strong> ${urlParams.get('bizurl') || '<em>Not Provided</em>'}<br>
+          <strong>Timestamp (Seniority Record):</strong> ${urlParams.get('submissionDate') || new Date().toISOString()}
+        `;
+      }
+    });
+  </script>
+</body>
+</html>
