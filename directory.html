@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Directory | Teton Idaho Chamber of Commerce</title>
+  <meta name="description" content="Browse our official roster of local businesses, retail shops, and professional services supporting Teton, Idaho.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand-container">
+      <img src="images/logo.webp" alt="Teton Chamber Logo" width="60" height="60">
+      <h1>Teton Chamber of Commerce</h1>
+    </div>
+    <div class="date-display"><span id="current-date"></span></div>
+  </header>
+
+  <nav class="main-navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="join.html">Join</a></li>
+      <li><a href="directory.html" class="active">Directory</a></li>
+    </ul>
+  </nav>
+
+  <main class="directory-container">
+    <h2>Business Member Directory</h2>
+    
+    <!-- View Switcher Controls -->
+    <div class="directory-controls">
+      <button id="grid-toggle" class="control-btn active-btn">Grid View</button>
+      <button id="list-toggle" class="control-btn">List View</button>
+    </div>
+
+    <!-- Active Directory Display Wrapper -->
+    <div id="directory-display" class="directory-grid-layout">
+      <!-- Static Fallbacks / Populated Dynamically by JS -->
+      <div class="member-card">
+        <h3>Teton Valley Outfitters</h3>
+        <p><strong>Category:</strong> Outdoor Retail & Tourism</p>
+        <p><strong>Phone:</strong> (208) 555-0144</p>
+        <p><strong>Address:</strong> 450 N Alpine Way, Teton, ID</p>
+        <a href="https://example.com" target="_blank" rel="noopener">Visit Website</a>
+      </div>
+
+      <div class="member-card">
+        <h3>High Peak Technical Solutions</h3>
+        <p><strong>Category:</strong> IT Services & Managed Hosting</p>
+        <p><strong>Phone:</strong> (208) 555-0188</p>
+        <p><strong>Address:</strong> 12 Professional Ridge, Teton, ID</p>
+        <a href="https://example.com" target="_blank" rel="noopener">Visit Website</a>
+      </div>
+
+      <div class="member-card">
+        <h3>Grand Teton Bakery & Cafe</h3>
+        <p><strong>Category:</strong> Food & Dining</p>
+        <p><strong>Phone:</strong> (208) 555-0122</p>
+        <p><strong>Address:</strong> 88 Main Street, Teton, ID</p>
+        <a href="https://example.com" target="_blank" rel="noopener">Visit Website</a>
+      </div>
+    </div>
+  </main>
+
+ <footer class="site-footer">
+  <!-- Top Overlay Section containing the main info grid -->
+  <div class="footer-overlay-top">
+    <div class="footer-grid-wrapper">
+      
+      <!-- Column 1: Brand Assets & Social Handles -->
+      <div class="footer-col brand-col">
+        <div class="footer-logo-box">
+          <img src="images/logo.webp" alt="Teton Chamber Logo" width="50" height="50">
+          <h2>TETON VALLEY<br><span>CHAMBER OF COMMERCE</span></h2>
+        </div>
+        <p class="tagline">RIDE FOR THE BRAND</p>
+        <div class="social-row">
+          <span class="follow-us-label">FOLLOW US :</span>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Column 2: Core Contact & Addresses -->
+      <div class="footer-col address-col">
+        <p><a href="mailto:info@tetonchamber.org">info@tetonchamber.org</a></p>
+        <p><a href="tel:2085550199">(208) 555-0199</a></p>
+        
+        <div class="address-block">
+          <span class="block-title">PHYSICAL ADDRESS:</span>
+          <p>123 Main Street<br>Teton, ID 83451</p>
+        </div>
+
+        <div class="address-block">
+          <span class="block-title">MAILING ADDRESS:</span>
+          <p>PO Box 550<br>Teton, ID 83451</p>
+        </div>
+      </div>
+
+      <!-- Column 3: Regional Info or Embedded Map Placeholder -->
+      <div class="footer-col extra-col">
+        <span class="block-title">TETON VALLEY REGION &<br>GREATER YELLOWSTONE METRO</span>
+        <p>Visitor Center Operations<br>532 North Cache Street<br>Teton, ID 83451</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Gold/Orange Navigation Strip -->
+  <div class="footer-nav-strip">
+    <div class="strip-links">
+      <a href="#">ABOUT US</a>
+      <a href="#">CONTACT</a>
+      <a href="#">MEDIA</a>
+      <a href="#">SITEMAP</a>
+      <a href="#">PRIVACY POLICY</a>
+    </div>
+  </div>
+
+  <!-- Bottom Attribution Bar -->
+  <div class="footer-bottom-bar">
+    <p>&copy; 2026 Teton Chamber of Commerce | Austin Anumudu | Nigeria</p>
+  </div>
+</footer>
